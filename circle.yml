@@ -1,11 +1,11 @@
 machine:
-	java:
-		version:	
-			oraclejdk8
+  java:
+    version:	
+      oraclejdk8
 test:
-	override:
-		- mvn clean test
+  override:
+    - mvn clean test
 general:
-	branches:
-		only:
-			- master
+  branches:
+    only:
+      - master
