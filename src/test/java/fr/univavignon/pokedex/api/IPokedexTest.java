@@ -28,6 +28,7 @@ public class IPokedexTest {
 		Mockito.when(pokedexMock.addPokemon(pokemon)).thenReturn(0);
 		Mockito.when(pokedexMock.getPokemon(0)).thenReturn(pokemon);
 		Mockito.when(pokedexMock.getPokemons()).thenReturn(pokemons);
+		Mockito.when(pokedexMock.getPokemon(-1)).thenThrow(new PokedexException(""));
 	}
 	
 	@Test(expected=PokedexException.class)

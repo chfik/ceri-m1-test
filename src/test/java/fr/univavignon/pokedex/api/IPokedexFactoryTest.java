@@ -43,8 +43,8 @@ public class IPokedexFactoryTest {
 		IPokedex pokedex = pokedexFactoryMock.createPokedex(pokemonMetadataProviderMock, pokemonFactoryMock);
 		assertEquals(0, pokedex.size());
 		assertEquals(0, pokedex.addPokemon(pokemon));
-		assertEquals(1, pokedex.size());
 		assertEquals(pokemon, pokedex.getPokemon(0));
+		assertEquals(1, pokedexMock.getPokemons().size());
 		
 	}
 }
