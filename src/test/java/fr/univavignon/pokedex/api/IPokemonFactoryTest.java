@@ -18,6 +18,7 @@ public class IPokemonFactoryTest {
 	public void setUp() throws PokedexException {
 		
 		Mockito.when(pokemonFactoryMock.createPokemon(0, 613, 64, 4000, 4)).thenReturn(new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56));
+		
 	}
 	@Test 
 	public void testPokemonMetadata() throws PokedexException{
