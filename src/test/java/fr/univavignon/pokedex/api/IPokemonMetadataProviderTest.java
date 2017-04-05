@@ -40,3 +40,4 @@ public class IPokemonMetadataProviderTest {
 		assertEquals(90,pokemonMetadata.getStamina());
 	}
 }
+ 
