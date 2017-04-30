@@ -21,7 +21,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 			throw new PokedexException("Invalid index !");
 		
 		try {
-			String pokemonsDatas = Request.Get("https://github.com/chfik/ceri-m1-test/blob/master/data.json").execute().returnContent().asString();
+			String pokemonsDatas = Request.Get("https://raw.githubusercontent.com/PokemonGo-Enhanced/node-pokemongo-data/master/data.json").execute().returnContent().asString();
 			JSONArray pokemons = new JSONArray(pokemonsDatas);	
 			JSONObject our_pok = pokemons.getJSONObject(index-1);
 			PokemonMetadata pokemonMetadata = getPokemonMetadataFromJSONObject(our_pok);

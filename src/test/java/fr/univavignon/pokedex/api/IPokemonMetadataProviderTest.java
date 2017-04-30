@@ -17,7 +17,7 @@ public class IPokemonMetadataProviderTest {
 	@Before
 	public void setUp() throws PokedexException {
 		Mockito.when(pokemonMetadataProviderMock.getPokemonMetadata(-1)).thenThrow(new PokedexException(""));
-		Mockito.when(pokemonMetadataProviderMock.getPokemonMetadata(0)).thenReturn(new PokemonMetadata(0,"Bulbizarre",126,126,90));
+		Mockito.when(pokemonMetadataProviderMock.getPokemonMetadata(0)).thenReturn(new PokemonMetadata(0,"Bulbasaur",126,126,90));
 		Mockito.when(pokemonMetadataProviderMock.getPokemonMetadata(151)).thenThrow(new PokedexException(""));
 	}
 	
@@ -37,7 +37,7 @@ public class IPokemonMetadataProviderTest {
 		assertEquals(126,pokemonMetadata.getAttack());
 		assertEquals(126,pokemonMetadata.getDefense());
 		assertEquals(0,pokemonMetadata.getIndex());
-		assertEquals("Bulbizarre",pokemonMetadata.getName());
+		assertEquals("Bulbasaur",pokemonMetadata.getName());
 		assertEquals(90,pokemonMetadata.getStamina());
 	}
 }
