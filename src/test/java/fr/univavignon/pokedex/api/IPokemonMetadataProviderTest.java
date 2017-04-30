@@ -33,7 +33,7 @@ public class IPokemonMetadataProviderTest {
 	
 	@Test 
 	public void testPokemonMetadata() throws PokedexException{
-		PokemonMetadata pokemonMetadata = pokemonMetadataProviderMock.getPokemonMetadata(0);
+		PokemonMetadata pokemonMetadata = pokemonMetadataProviderMock.getPokemonMetadata(0); 
 		assertEquals(126,pokemonMetadata.getAttack());
 		assertEquals(126,pokemonMetadata.getDefense());
 		assertEquals(0,pokemonMetadata.getIndex());
