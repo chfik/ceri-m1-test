@@ -5,6 +5,8 @@ machine:
 test:
   override:
     - mvn clean test
+  post:
+  	- mvn jacoco:report
 general:
   branches:
     only:
