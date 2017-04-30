@@ -23,7 +23,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 		try {
 			String pokemonsDatas = Request.Get("https://raw.githubusercontent.com/PokemonGo-Enhanced/node-pokemongo-data/master/data.json").execute().returnContent().asString();
 			JSONArray pokemons = new JSONArray(pokemonsDatas);	
-			JSONObject our_pok = pokemons.getJSONObject(index+1);
+			JSONObject our_pok = pokemons.getJSONObject(index);
 			PokemonMetadata pokemonMetadata = getPokemonMetadataFromJSONObject(our_pok);
 			return pokemonMetadata;
 		} catch (Exception e) {
@@ -34,7 +34,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 	
 	public PokemonMetadata getPokemonMetadataFromJSONObject(JSONObject data) throws JSONException{
 		PokemonMetadata pokemonMetadata;
-		pokemonMetadata = new PokemonMetadata(	data.getInt("PkMn")+1,
+		pokemonMetadata = new PokemonMetadata(	data.getInt("PkMn")-1,
 												data.getString("Identifier"), 
 												data.getInt("BaseAttack"), 
 												data.getInt("BaseDefense"), 
