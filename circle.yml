@@ -6,7 +6,7 @@ test:
   override:
     - mvn clean test
   post:
-  	- mvn jacoco:report
+    - mvn jacoco:report
 general:
   branches:
     only:
