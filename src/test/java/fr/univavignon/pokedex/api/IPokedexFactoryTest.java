@@ -20,8 +20,8 @@ public class IPokedexFactoryTest {
 	@Mock private IPokedex pokedexMock;
 	@Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
-	Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
-	List<Pokemon> pokemons = new ArrayList<Pokemon>();
+	private Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
+	private List<Pokemon> pokemons = new ArrayList<Pokemon>();
 	
 	@Before
 	public void setUp() throws PokedexException {
