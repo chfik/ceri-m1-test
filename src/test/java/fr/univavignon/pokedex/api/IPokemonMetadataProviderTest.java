@@ -10,7 +10,8 @@ import org.mockito.junit.MockitoRule;
 
 
 public class IPokemonMetadataProviderTest {
-	@Mock private IPokemonMetadataProvider pokemonMetadataProviderMock;
+	@Mock
+	protected IPokemonMetadataProvider pokemonMetadataProviderMock;
 	@Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
 	@Before

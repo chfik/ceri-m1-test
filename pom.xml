@@ -15,7 +15,20 @@
   		<artifactId>mockito-all</artifactId>
   		<version>1.10.19</version>
   	</dependency>
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20090211</version>
+	    
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.httpcomponents</groupId>
+	    <artifactId>fluent-hc</artifactId>
+	    <version>4.5.3</version>
+	</dependency>
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
