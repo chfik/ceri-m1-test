@@ -82,8 +82,7 @@ public class Pokedex implements IPokedex, Serializable{
 
 	@Override
 	public void notifyPokemonTrainer() {
-		pokemonTrainer.saveAsFile();
-		
+		if(pokemonTrainer != null) pokemonTrainer.saveAsFile();
 	}
 
 	@Override
