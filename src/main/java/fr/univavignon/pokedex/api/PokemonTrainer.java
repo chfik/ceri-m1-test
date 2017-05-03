@@ -4,15 +4,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Observable;
-import java.util.Observer;
 
 /**
  * Trainer POJO.
  * 
  * @author fv
  */
-public class PokemonTrainer implements Observer, Serializable{
+public class PokemonTrainer implements Serializable{
 
 	/**
 	 * 
@@ -57,12 +55,8 @@ public class PokemonTrainer implements Observer, Serializable{
 	public IPokedex getPokedex() {
 		return pokedex;
 	}
-
-	@Override
-	public void update(Observable o, Object arg) {
-		saveAsFile();
-	}
 	
+	/**{@inheritDoc}**/
 	public void saveAsFile(){
 		ObjectOutputStream oos = null;
 		

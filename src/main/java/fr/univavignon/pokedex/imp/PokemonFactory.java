@@ -14,9 +14,13 @@ public class PokemonFactory implements IPokemonFactory, Serializable {
 	 */
 	private static final long serialVersionUID = -3318314959394346304L;
 	
+	/**
+	 * {@inheritDoc}
+	 **/
 	public double calculIV(String name, int cp, int dust){
 		return 0.0;
 	}
+	
 	@Override
 	public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
 		PokemonMetadataProvider pokMetadaProvider = new PokemonMetadataProvider();

@@ -22,10 +22,23 @@ public class Pokedex implements IPokedex, Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 3119629640291676519L;
+	
+	/**{@inheritDoc}**/
 	private IPokemonMetadataProvider pokemonMetadataProvider; 
+	
+	/**{@inheritDoc}**/
 	private IPokemonFactory pokemonFactory;
 	
+	/***
+	 * Map de pokemon 
+	 * Key : index du pokemon dans la pokedex
+	 * Value : pokemon
+	 ***/
 	private Map<Integer,Pokemon> pokemonsMap; 
+	
+	/**
+	 * Trainer à notifier en cas de changement
+	 **/
 	private PokemonTrainer pokemonTrainer;
 	
 	public Pokedex(IPokemonMetadataProvider pokemonMetadataProvider, IPokemonFactory pokemonFactory) {
