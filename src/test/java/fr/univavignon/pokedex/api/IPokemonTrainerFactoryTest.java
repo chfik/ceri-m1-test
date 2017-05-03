@@ -51,9 +51,13 @@ public class IPokemonTrainerFactoryTest {
 	
 	@After
 	public void eraseFiles(){
-	
-		File trainer2 = new File("trainers/trainer2.ser");
-		trainer2.delete();
+		try{
+			File trainer2 = new File("trainers/trainer2.ser");
+			trainer2.delete();
+		}catch(Exception e){
+			//Le fichier n'existe pas on fait rien
+		}
+		
 	}
 	
 }
