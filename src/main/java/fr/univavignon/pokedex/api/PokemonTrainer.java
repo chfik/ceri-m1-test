@@ -1,11 +1,23 @@
 package fr.univavignon.pokedex.api;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * Trainer POJO.
  * 
  * @author fv
  */
-public class PokemonTrainer {
+public class PokemonTrainer implements Observer, Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1004403075637584605L;
 
 	/** Trainer name. **/
 	private final String name;
@@ -27,7 +39,9 @@ public class PokemonTrainer {
 		this.name = name;
 		this.team = team;
 		this.pokedex = pokedex;
+		this.saveAsFile();
 	}
+
 	
 	/** Name getter. **/
 	public String getName() {
@@ -43,5 +57,33 @@ public class PokemonTrainer {
 	public IPokedex getPokedex() {
 		return pokedex;
 	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+		saveAsFile();
+	}
+	
+	public void saveAsFile(){
+		ObjectOutputStream oos = null;
+		
+		try {
+			final FileOutputStream fichier = new FileOutputStream("trainers/"+name+".ser");
+			oos = new ObjectOutputStream(fichier);
+			oos.writeObject(this);
+			oos.flush();
+		} catch (Exception e) {
+			e.printStackTrace();  
+		} finally {
+			try {
+				if (oos != null) {
+					oos.flush();
+					oos.close();
+				}
+			} catch (final IOException ex) {
+				ex.printStackTrace();	
+			}
+		}
+	}
+
 	
 }

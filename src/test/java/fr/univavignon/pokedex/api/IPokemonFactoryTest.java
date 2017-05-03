@@ -11,13 +11,14 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
 public class IPokemonFactoryTest {
-	@Mock private IPokemonFactory pokemonFactoryMock;
+	@Mock
+	protected IPokemonFactory pokemonFactoryMock;
 	@Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
 	@Before
 	public void setUp() throws PokedexException {
 		
-		Mockito.when(pokemonFactoryMock.createPokemon(0, 613, 64, 4000, 4)).thenReturn(new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56));
+		Mockito.when(pokemonFactoryMock.createPokemon(0, 613, 64, 4000, 4)).thenReturn(new Pokemon(0, "Bulbasaur", 126, 126, 90, 613, 64, 4000, 4, 56));
 		
 	}
 	@Test 
@@ -26,7 +27,7 @@ public class IPokemonFactoryTest {
 		Pokemon pokemon = pokemonFactoryMock.createPokemon(0, 613, 64, 4000, 4);
 		
 		assertEquals(0,pokemon.getIndex());
-		assertEquals("Bulbizarre",pokemon.getName());
+		assertEquals("Bulbasaur",pokemon.getName());
 		assertEquals(613, pokemon.getCp());
 		assertEquals(64, pokemon.getHp());
 		assertEquals(4000, pokemon.getDust());

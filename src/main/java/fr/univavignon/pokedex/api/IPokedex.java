@@ -1,5 +1,6 @@
 package fr.univavignon.pokedex.api;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * 
  * @author fv
  */
-public interface IPokedex extends IPokemonMetadataProvider, IPokemonFactory {
+public interface IPokedex extends IPokemonMetadataProvider, IPokemonFactory, Serializable {
 	
 	/**
 	 * Returns the number of pokemon this pokedex contains.
@@ -51,5 +52,10 @@ public interface IPokedex extends IPokemonMetadataProvider, IPokemonFactory {
 	 * @return Sorted unmodifiable list of all pokemons.
 	 */
 	List<Pokemon> getPokemons(Comparator<Pokemon> order);
+	
+
+	void notifyPokemonTrainer();
+
+	void setPokemonTrainer(PokemonTrainer pokemonTrainer);
 	
 }

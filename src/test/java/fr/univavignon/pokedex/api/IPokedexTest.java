@@ -14,7 +14,7 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
 public class IPokedexTest {
-	@Mock private IPokedex pokedexMock;
+	@Mock protected IPokedex pokedexMock;
 	@Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
 	
 	private Pokemon pokemon = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);

@@ -14,7 +14,7 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
 public class IPokedexFactoryTest {
-	@Mock private IPokedexFactory pokedexFactoryMock;
+	@Mock protected IPokedexFactory pokedexFactoryMock;
 	@Mock private IPokemonMetadataProvider pokemonMetadataProviderMock;
 	@Mock private IPokemonFactory pokemonFactoryMock;
 	@Mock private IPokedex pokedexMock;
@@ -44,7 +44,7 @@ public class IPokedexFactoryTest {
 		assertEquals(0, pokedex.size());
 		assertEquals(0, pokedex.addPokemon(pokemon));
 		assertEquals(pokemon, pokedex.getPokemon(0));
-		assertEquals(1, pokedexMock.getPokemons().size());
+		assertEquals(1, pokedex.getPokemons().size());
 		
 	}
 }

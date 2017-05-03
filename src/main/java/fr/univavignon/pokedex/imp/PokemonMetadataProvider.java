@@ -1,5 +1,7 @@
 package fr.univavignon.pokedex.imp;
 
+import java.io.Serializable;
+
 import org.apache.http.client.fluent.Request;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -10,9 +12,14 @@ import fr.univavignon.pokedex.api.IPokemonMetadataProvider;
 import fr.univavignon.pokedex.api.PokedexException;
 import fr.univavignon.pokedex.api.PokemonMetadata;
 
-public class PokemonMetadataProvider implements IPokemonMetadataProvider {
+public class PokemonMetadataProvider implements IPokemonMetadataProvider, Serializable {
 
 
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4406239882126981838L;
 
 	@Override
 	public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
