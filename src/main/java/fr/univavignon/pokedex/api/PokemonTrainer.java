@@ -67,7 +67,7 @@ public class PokemonTrainer implements Observer, Serializable{
 		ObjectOutputStream oos = null;
 		
 		try {
-			final FileOutputStream fichier = new FileOutputStream("trainers/"+name+".ser");
+			final FileOutputStream fichier = new FileOutputStream("./trainers/"+name+".ser");
 			oos = new ObjectOutputStream(fichier);
 			oos.writeObject(this);
 			oos.flush();

@@ -20,7 +20,7 @@ public class PokemonTrainerFactory implements IPokemonTrainerFactory {
 
 		try {
 			
-			final FileInputStream fichier = new FileInputStream("trainers/"+name+".ser");
+			final FileInputStream fichier = new FileInputStream("./trainers/"+name+".ser");
 			ois = new ObjectInputStream(fichier);
 			PokemonTrainer pokemonTrainer = (PokemonTrainer) ois.readObject();
 			return pokemonTrainer;
