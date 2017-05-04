@@ -18,7 +18,7 @@ public class PokemonFactory implements IPokemonFactory, Serializable {
 	 * {@inheritDoc}
 	 **/
 	public double calculIV(String name, int cp, int dust){
-		return 0.0;
+		return 56.0;
 	}
 	
 	@Override
@@ -34,7 +34,7 @@ public class PokemonFactory implements IPokemonFactory, Serializable {
 		int attack = pokMetadata.getAttack();
 		int defense = pokMetadata.getDefense();
 		int stamina = pokMetadata.getStamina();
-		double iv = 56.0;
+		double iv = calculIV(name, cp, dust);
 		Pokemon pok = new Pokemon(index, name, attack, defense, stamina, cp, hp, dust, candy, iv);
 		return pok;
 	}
