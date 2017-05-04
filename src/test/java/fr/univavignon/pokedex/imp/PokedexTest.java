@@ -8,7 +8,7 @@ public class PokedexTest extends IPokedexTest {
 
 	@Before
 	public void setUp() {
-		pokedexMock = new Pokedex(pokedexMock, pokedexMock);
+		pokedexMock = new Pokedex(new PokemonMetadataProvider(), new PokemonFactory());
 	}
 
 }
