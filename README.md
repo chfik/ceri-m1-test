@@ -1,4 +1,6 @@
-Chafik EL MAHDAOUI - ALTERNANT
+Chafik EL MAHDAOUI
+ALTERNANT
+M1 - 2016/2017
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/88c18f2242b04802b2b6346db2385c99)](https://www.codacy.com/app/chfik/ceri-m1-test?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=chfik/ceri-m1-test&amp;utm_campaign=Badge_Grade)
 
